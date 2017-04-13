@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('require this file: config.stag.env')
+console.log('require this file: config.dev.env')
 
 module.exports = {
 	"redis": {
@@ -17,18 +17,16 @@ module.exports = {
 
 	"crypto" : {	// 3DES 加密 PASSWORD
 		algorithm: 'aes-128-ecb',
-		key: 'UITN25LMUQC436IM',
+		key: '',
 	    iv: 0,
 		autoPadding: true
 	},
 
 	"request" : {
 		"api_secret" :  {	// api_key=api_secret
-			"5f6b2341e05094586a575b7e4888f0aa" : "3a9690a8808269919ad8f77859e2890b"
+			"************" : "************"
 		},
 
-		// "hostname": "http://d-service.api.edataapi.com/",
-		"hostname":"http://192.168.0.137:8081/"
-		//"hostname":"http://t-service.api.edataapi.com/",
+		"hostname":"localhost:3000/"
 	}
 }
