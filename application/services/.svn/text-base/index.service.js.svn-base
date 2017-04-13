@@ -1,0 +1,19 @@
+"use strict";
+
+module.exports = () => {
+
+	class IndexService extends App.Service {
+
+		constructor() {
+			super('recharges');
+		}
+
+		list(paramters) {
+			// const list = this.http.put(paramters, this.request_paramters, 'json');
+			// return list;
+		}
+
+	}
+
+	return new IndexService;
+};

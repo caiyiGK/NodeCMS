@@ -1,0 +1,36 @@
+"use strict";
+
+const filePath = '../services/'
+
+class BaseController {
+	constructor() {
+		if (new.target === BaseController) throw new Error('Not New');
+		/*if (!arguments[0]) BaseController.classMethod(new.target,this)*/
+	}
+
+	/*// 对应 Service 绑定
+	static classMethod(target,self) {
+	 	let fileName =  target.name
+							  .replace(/Controller/,'')
+							  .toLocaleLowerCase();
+		self.service = require(filePath + fileName + '.service')();
+  	}
+
+	static selfish(target){
+		const cache = new WeakMap();
+		const handler = {
+			get (target, key) {
+				const value = Reflect.get(target, key);
+				if (typeof value !== 'function') return value;
+			  	if (!cache.has(value)) cache.set(value, value.bind(target));
+			  	return cache.get(value);
+			}
+		};
+		const proxy = new Proxy(target, handler);
+		return proxy;
+	}*/
+
+}
+
+
+module.exports = BaseController;

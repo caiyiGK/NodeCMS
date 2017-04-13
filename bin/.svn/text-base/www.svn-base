@@ -1,0 +1,67 @@
+/**
+ * Node 启动依赖模块
+ */
+
+var app   = require('../app'),
+	debug = require('debug')('cd:server'),
+	http  = require('http');
+
+// 获取并设置端口
+var port = normalizePort(process.env.PORT || '3001');
+app.set('port', port);
+
+// 创建 HTTP 服务器
+var server = http.createServer(app);
+
+// 监听端口
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+// 将端口标准化为 number, string 或 false
+function normalizePort(val) {
+	var port = parseInt(val, 10);
+
+	if (isNaN(port)) {
+		return val;  // named pipe
+	}
+
+	if (port >= 0) {
+		return port;  // port number
+	}
+
+	return false;
+}
+
+// 事件监听 HTTP 服务器的 “error” 事件
+function onError(error) {
+  	if (error.syscall !== 'listen') {
+	 	throw error;
+  	}
+
+  	var bind = typeof port === 'string'
+    			? 'Pipe ' + port
+    			: 'Port ' + port;
+
+	switch (error.code) {
+		case 'EACCES':
+			console.error(bind + ' requires elevated privileges');
+			process.exit(1);
+			break;
+		case 'EADDRINUSE':
+			console.error(bind + ' is already in use');
+			process.exit(1);
+			break;
+		default:
+			throw error;
+	}
+}
+
+// 监听 HTTP 服务器 “listening” 事件
+function onListening() {
+	var addr = server.address();
+	var bind = typeof addr === 'string'
+	? 'pipe ' + addr
+	: 'port ' + addr.port;
+	debug('Listening on ' + bind);
+}
