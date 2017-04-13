@@ -3,7 +3,7 @@ var log4js = require('log4js'),
 	querystring = require('querystring'),
 	url = require('url');
 
-	console.log('process.env.NODE_ENV',process.env.NODE_ENV)
+	// console.log('process.env.NODE_ENV log4js',process.env.NODE_ENV)
 
 log4js.configure(log4_config);
 var logDebug = log4js.getLogger('logDebug'),

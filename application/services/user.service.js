@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = app => {
-	class UserService extends app.Service {
+	class UserService extends App.Service {
 
 		constructor() {
 			super('users');

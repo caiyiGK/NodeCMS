@@ -1,8 +1,7 @@
 "use strict";
 
-module.exports = app => {
-	class IndexController extends app.Controller {
-
+module.exports = () => {
+	class IndexController extends App.Controller {
 		/**
 		 * 初始化
 		 **/
@@ -45,5 +44,5 @@ module.exports = app => {
 		}
 
 	}
-	return new IndexController
+	return IndexController
 }

@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = () => {
+module.exports = app => {
 	class UserService extends App.Service {
 
 		constructor() {
@@ -20,5 +20,5 @@ module.exports = () => {
 
 	}
 
-	return new UserService;
+	return UserService;
 };

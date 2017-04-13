@@ -1,14 +1,14 @@
 "use strict";
 
-let express 	 = require('express'),
-    morgan       = require('morgan'),
- 	path    	 = require('path'),
-	cookieParser = require('cookie-parser'),
-	bodyParser 	 = require('body-parser'),
-    session      = require('./config/config.session'),
-    routes       = require('./utils/route-map.util'),
-    log          = require('./utils/log4js.util');
-require("babel-core/register");
+let express 	 = require('express')
+    , morgan     = require('morgan')
+ 	, path    	 = require('path')
+	, cookieParser = require('cookie-parser')
+	, bodyParser 	 = require('body-parser')
+    , session      = require('./config/config.session')
+    , routes       = require('./utils/route-map.util')
+    , log          = require('./utils/log4js.util');
+
 let app = express();
 
 app.set('views', path.join(__dirname, 'views'));  // 设置模版路径

@@ -1,8 +1,7 @@
 "use strict";
+module.exports = () => {
 
-module.exports = app => {
-
-	class IndexService extends app.Service {
+	class IndexService extends App.Service {
 
 		constructor() {
 			super('recharges');

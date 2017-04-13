@@ -7,11 +7,17 @@ index.controller.js
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/express_framework/!svn/ver/11/branches/dev/application/controllers/index.controller.js
+/svn/express_framework/!svn/ver/19/branches/dev/application/controllers/index.controller.js
+END
+email.controller.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/express_framework/!svn/ver/19/branches/dev/application/controllers/email.controller.js
 END
 base.controller.js
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svn/express_framework/!svn/ver/11/branches/dev/application/controllers/base.controller.js
+/svn/express_framework/!svn/ver/19/branches/dev/application/controllers/base.controller.js
 END
